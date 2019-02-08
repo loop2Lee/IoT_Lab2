@@ -9,6 +9,8 @@ def num_str(row):
     #this function block comes from the lab manual 
     if isinstance(row['Population'], str):
         row['Population'] = int(row['Population'].replace(",", ""))
+        if ('GDP' in row):
+            row['GDP'] = int(row['GDP'].replace(",", ""))
         #print('population', row['Population'])
         return row
 
